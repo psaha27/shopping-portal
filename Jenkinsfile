@@ -24,7 +24,6 @@ pipeline{
             steps{
                 echo 'this is the package job'
                 sh ‘npm run package’
-                sleep 7
             }
         }
     }
