@@ -3,28 +3,28 @@ pipeline{
     agent any
 
 // uncomment the following lines by removing /* and */ to enable
- tools{
-       nodejs  ‘nodejs’
-    } 
+    tools{
+       nodejs 'nodejs' 
+    }
+    
 
     stages{
-        stage(‘build’-the-app){
+        stage('build'){
             steps{
                 echo 'this is the build job'
-                sh ‘npm install’
-           }
-        }
-        stage('test-the-app){
-            steps{
-                echo 'this is the test job'
-                sh ‘npm test’
+                sh 'npm install'
             }
         }
-        stage(‘package-the-app){
+        stage('test'){
+            steps{
+                echo 'this is the test job'
+                sh 'npm test'
+            }
+        }
+        stage('package'){
             steps{
                 echo 'this is the package job'
-                sh ‘npm run package’
-                sleep 7
+                sh 'npm run package'
             }
         }
     }
@@ -37,4 +37,3 @@ pipeline{
     }
     
 }
-
