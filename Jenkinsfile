@@ -22,7 +22,7 @@ pipeline {
       }
     }
 
-    stage('artifact') {
+    stage('archive-the-app') {
       steps {
         archiveArtifacts '**/distribution/*.zip'
       }
